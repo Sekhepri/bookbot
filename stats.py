@@ -12,3 +12,14 @@ def get_num_char(text):
         else:
             num_char[char.lower()] = 1
     return num_char
+
+
+def sort_on(items):
+    return items["num"]
+
+def sort_dict(dict):
+    new_list = []
+    for char in dict:
+        new_list.append({"char":char, "num":dict[char]})
+    new_list.sort(reverse=True, key=sort_on)
+    return new_list
